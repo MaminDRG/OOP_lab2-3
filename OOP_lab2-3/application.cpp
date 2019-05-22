@@ -76,7 +76,9 @@ int TApplication::run()
                     
                 }
                 std::cout << std::endl;
+                delete[] rootsMas;
                 break;
+                
             }
                 
             case 3:
@@ -97,7 +99,7 @@ int TApplication::run()
                 break;
 
             }
-                            default: break;
+            default: break;
         }
         if (ch == 0) break;
     }

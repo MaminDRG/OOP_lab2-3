@@ -45,7 +45,7 @@ Tcomplex& Tcomplex::operator = (const Tcomplex &c)
     }
 
 
-    // оператор +=
+
 Tcomplex& Tcomplex::operator += (Tcomplex &c)
     {
         Re += c.Re;
@@ -53,14 +53,14 @@ Tcomplex& Tcomplex::operator += (Tcomplex &c)
         return *this;
     }
     
-    // оператор сложения
+
     Tcomplex Tcomplex::operator + (const Tcomplex &c)
     {
         return Tcomplex (Re + c.Re, Im + c.Im);
     }
 
     
-    // оператор вычитания
+
     Tcomplex Tcomplex::operator - (const Tcomplex &c)
     {
         return Tcomplex(Re - c.Re, Im - c.Im);
@@ -68,7 +68,7 @@ Tcomplex& Tcomplex::operator += (Tcomplex &c)
 
 
 
-    // оператор умножения
+
     Tcomplex Tcomplex::operator * (const Tcomplex &c)
     {
         return Tcomplex(Re * c.Re - Im * c.Im, Re * c.Im + Im * c.Re);
@@ -77,7 +77,7 @@ Tcomplex& Tcomplex::operator += (Tcomplex &c)
     Tcomplex Tcomplex::operator * (const double & num){
         return (*this) * Tcomplex(num, 0);
     }
-    // оператор деления
+
     Tcomplex Tcomplex::operator / (const Tcomplex &c)
     {
         Tcomplex temp;
@@ -92,14 +92,14 @@ Tcomplex& Tcomplex::operator += (Tcomplex &c)
     
 
 
-// перегрузка оператора <<
+
 std::ostream& operator<< (std::ostream &out, const Tcomplex &c)
 {
     out << "(" << c.Re << ", " << c.Im << ")";
     return out;
 }
 
-// перегрузка оператора >>
+
 std::istream& operator>> (std::istream &in, Tcomplex &c)
 {
     in >> c.Re >> c.Im;
